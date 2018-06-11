@@ -1,13 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import RetroHitCounter from 'react-retro-hit-counter';
 import './App.css';
+import * as fs from 'fs';
+
+type State = {
+  hits: number,
+};
+
+this.state = {
+  hits: 0,
+};
 
 class App extends Component {
+  constructor() {
+    super();
+
+  }
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
@@ -17,5 +29,7 @@ class App extends Component {
     );
   }
 }
+
+// <RetroHitCounter hits={this.state.hits} />
 
 export default App;
